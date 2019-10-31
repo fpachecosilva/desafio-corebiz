@@ -1,0 +1,146 @@
+/* clean CSS */
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}body {line-height: 1;}ol, ul {list-style: none;}blockquote, q {quotes: none;}blockquote:before, blockquote:after,q:before, q:after {content: '';content: none;}table {border-collapse: collapse;border-spacing: 0;}
+/* clean CSS */
+
+/* Variaveis: */
+:root {
+    --bg: #FFF;
+    --principal: #FFF;
+    --secundaria: #222222;
+    --vermelho: #EF7460;
+    --vermelho-hover: #ff8b78;
+    --margin: 30px;
+    --tempo: 0.2s;
+    --radius: 3px;    
+    --shadow: 0px 5px 30px 0px rgba(0,0,0,0.1);
+}
+/* Variaveis: */
+
+html {background: var(--bg); width: 100%; height: 100%; min-height: 100%; overflow-x: hidden;}
+body {font-family: 'Montserrat', sans-serif; color: var(--secundaria    ); box-sizing: border-box; background: var(--bg); font-size: 16px; height: 100%; min-height: 100% !important;}
+
+
+/* Elementos: */
+    h1, h2 {display: block; clear: both;}
+    strong {font-weight: 700;}
+    br {clear: both; display: block;}
+    a {color: var(--secundaria); text-decoration: none; -webkit-transition: color var(--tempo) ease-in-out; -moz-transition: color var(--tempo) ease-in-out; -ms-transition: color var(--tempo) ease-in-out; -o-transition: color var(--tempo) ease-in-out; transition: color var(--tempo) ease-in-out; }
+    img {display: block; outline: none;}
+    section {position: relative;}
+    article {position: relative; max-width: 1300px; width: 100%; box-sizing: border-box; margin: auto}
+    article:after {content: ''; display: block; clear: both;}
+    button { -webkit-transition: background var(--tempo) ease-in-out; -moz-transition: background var(--tempo) ease-in-out; -ms-transition: background var(--tempo) ease-in-out; -o-transition: background var(--tempo) ease-in-out; transition: background var(--tempo) ease-in-out; }
+/* :Elementos */
+
+header { border-bottom: 1px solid #EEEEEE }
+header article { font-size: 14px; color: var(--secundaria); display: flex; align-items: center; height: 90px; }
+header nav a { margin-left: 58px; display: inline-block }
+header nav a:hover { color: #ef7460; }
+header nav a:first-child { margin-left: 73px; }
+
+#minhaConta { display: none; width: 336px; height: 300px; text-align: center; background: var(--principal); -webkit-box-shadow: var(--shadow); -moz-box-shadow: var(--shadow); box-shadow: var(--shadow); position: absolute; top:91px; right: 180px; z-index: 10; }
+#minhaConta h1 { color: var(--vermelho); letter-spacing: 0.12em; font-size: 22px; margin: 0; margin-top: 44px;}
+#minhaConta p { color: #AAAAAA; font-size: 12px; text-align: center; letter-spacing: 0.12em; margin-top: 7px; margin-bottom: 17px; }
+#minhaConta a { color: var(--vermelho); text-decoration: underline; font-size: 12px; text-align: center; letter-spacing: 0.12em; }
+#minhaConta a:hover { color: var(--vermelho-hover); }
+#minhaConta .ultimaCompra { height: 148px; border-top: 1px solid rgba(112, 112, 112, 0.20);margin-top: 40px; }
+#minhaConta .ultimaCompra h3 { font-size: 12px; margin-top: 25px; margin-bottom: 24px; color: #AAAAAA; }
+#minhaConta .ultimaCompra img { max-width: 50px; }
+#minhaConta .ultimaCompraWrapper { box-sizing: border-box; padding: 0 22px; display: flex; align-items: center; height: 46px; }
+#minhaConta .ultimaCompraWrapper p { text-align: left; color: #2D2D2D; letter-spacing: 0.12em; width: 160px; margin: 0; margin-left: 10px; }
+#minhaConta .ultimaCompraWrapper p.ultimaCompraPreco { width: 61px; margin: 0; font-weight: bold; }
+.minhaContaX { background-image: url(../images/x.svg); width: 12px; background-repeat: no-repeat; height: 12px; display: block; z-index: 10; position: absolute; top: 25px; right: 25px; }
+
+#carrinho { display: none; width: 336px; position: absolute; background: var(--principal); z-index: 10; top:91px; right: 95px; -webkit-box-shadow: var(--shadow); -moz-box-shadow: var(--shadow); box-shadow: var(--shadow); }
+.carrinhoHeader { width: 100%; height: 66px; box-sizing: border-box; padding: 0 25px; background: var(--vermelho); color: var(--principal); display: flex; align-items: center; justify-content: left; } 
+.carrinhoHeader::before { content: ""; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 6px solid #ef7460; position: absolute; right: 15px; top: -6px; }
+.carrinhoHeader h3 { font-size: 16px; letter-spacing: 0.12em; }
+.carrinhoHeader p { font-size: 10px; margin-left: 8px; letter-spacing: 0.12em; }
+.carrinhoX { background-image: url(../images/carrinhox.svg); background-repeat: no-repeat; width: 12px; height: 12px; display: block; position: absolute; right: 25px; }
+
+.carrinhoProd { width: 100%; box-sizing: border-box; padding: 25px; height: 122px; display: flex; align-items: center; }
+.carrinhoProd a { width: 12px; height: 12px; display: inline-block; }
+.carrinhoProd a::before { content:""; width: 12px; height: 12px; background-image: url(../images/carrinhoxpreto.svg); background-repeat: no-repeat; display: inline-block; }
+.carrinhoProd img { max-width: 72px; margin-left: 17px; }
+.carrinhoProd .wrapper { display: grid; grid-template-rows: 50% 50%; align-items: center; height: 100%; margin-left: 20px; }
+
+.carrinhoNomeProduto { font-size: 12px; letter-spacing: 0.12em; color: #2D2D2D; line-height: 17px; }
+
+.carrinhoQtdePreco { display: grid; grid-template-columns: 50% 50%; align-items: center; }
+.carrinhoQtdePreco p:first-child { font-size: 15px; font-weight: bold; color: var(--secundaria); letter-spacing: 0.12em; }
+.carrinhoQtdePreco p:last-child { font-size: 12px; font-weight: bold; color: var(--secundaria); letter-spacing: 0.12em; text-align: right; }
+
+.carrinhoTotal { height: 180px; box-sizing: border-box; text-align: center; padding: 0 25px; -webkit-box-shadow: 0px -5px 6px 0px rgba(0,0,0,0.16); -moz-box-shadow: 0px -5px 6px 0px rgba(0,0,0,0.16); box-shadow: 0px -5px 6px 0px rgba(0,0,0,0.16); }
+.carrinhoTotal p { font-size: 16px; font-weight: bold; letter-spacing: 0.12em; padding-top:23px; padding-bottom: 19px; text-align: center; }
+.carrinhoTotal button { font-size:15px; font-weight: bold; width: 286px; height: 50px; background: var(--vermelho); margin-bottom:32px; border: 0; border-radius: var(--radius); color: var(--principal); display: flex; align-items: center; justify-content: center; }
+.carrinhoTotal button:hover { cursor: pointer; background: var(--vermelho-hover); }
+.carrinhoTotal button:after { content: url(../images/carrinho-branco.svg); width: 19px; height: 18px; float: left; display: block; margin-left: 9px; }
+.carrinhoTotal a { color: #2D2D2D; opacity: 0.5; letter-spacing: 0.12em; display: inline-block; }
+.carrinhoTotal a:hover { opacity: 0.8; }
+.carrinhoTotal a::before { content:""; width: 12px; height: 12px; background-image: url(../images/carrinhoxcinza.svg); background-repeat: no-repeat; display: inline-block; padding-right: 11px; }
+
+.conta { display: flex; align-items: center; margin-left: 244px }
+.conta a { color: #666666; margin-left: 9px }
+.conta a:hover { color: #ef7460; }
+.carrinhoButton { margin-left: 66px; width: 34px; height: 30px; background-image: url(../images/carrinho.svg); background-repeat: no-repeat; }
+.carrinhoButton a { height: 100%; display: block; }
+.carrinhoButton span { width: 18px; height: 18px; border-radius: 50%; background-color: var(--vermelho); color: var(--principal); font-size: 10px; font-weight: bold; display: flex; align-items: center; justify-content: center; margin-left: 15px; margin-top: -5px; }
+
+#destaques { padding-bottom: 108px; box-sizing: border-box; z-index: 1; }
+#destaques h1 { font-size: 30px; text-align: center; margin: 110px 0 78px 0; letter-spacing: 0.15em; }
+
+.wrapper-produtos { display: grid; grid-template-columns: 25% 25% 25% 25%; justify-items: center; }
+
+.produto { max-width: 283px; padding: 0 30px; border: 1px solid #EEEEEE; border-radius: var(--radius); box-sizing: border-box; -webkit-transition: box-shadow var(--tempo) ease-in-out; -moz-transition: box-shadow var(--tempo) ease-in-out; -ms-transition: box-shadow var(--tempo) ease-in-out; -o-transition: box-shadow var(--tempo) ease-in-out; transition: box-shadow var(--tempo) ease-in-out; }
+.produto:hover { border: 1px solid #fff; -webkit-box-shadow: var(--shadow); -moz-box-shadow: var(--shadow); box-shadow: var(--shadow); }
+.produto img { margin: auto; max-width: 100%; margin-top: 46px; margin-bottom: 44px; }
+.produto h3 { line-height: 22px; letter-spacing: 0.12em; margin-bottom: 13px; }
+.produto p { font-size: 24px; color: var(--vermelho); font-weight: bold; display: inline-block; letter-spacing: 0.12em; margin-bottom: 25px; }
+.produto p span { font-size: 14px; margin-right: 5px; }
+.produto button { width: 223px; height: 50px; background: var(--vermelho); margin-bottom:32px; border: 0; border-radius: var(--radius); color: var(--principal); display: flex; align-items: center; justify-content: center; }
+.produto button:hover { cursor: pointer; background: var(--vermelho-hover); }
+.produto button:after { content: url(../images/carrinho-branco.svg); width: 19px; height: 18px; float: left; display: block; margin-left: 9px; }
+
+footer { width: 100%; height: 165px; background: var(--vermelho); color: var(--principal); display: flex; align-items: center; }
+footer article { display: flex; align-items: center; }
+.newsletter { max-width: 260px; display: inline-block; }
+.newsletter h1 { font-size: 40px; letter-spacing: 0.12em; margin-bottom: 5px; }
+.newsletter p { font-size: 16px; line-height: 22px; }
+footer form { display: inline-block; margin-left: 82px }
+footer form input { width: 350px; height: 50px; border:0; border-radius: var(--radius); padding-left: 21px; box-sizing: border-box; }
+footer form input:first-child { margin-right: 19px; }
+footer form input::placeholder { color: #888888; font-family: 'Montserrat', sans-serif; }
+footer button { width: 200px; height: 50px; color: var(--vermelho); background: var(--principal); border: 0; border-radius: var(--radius); display: inline-block; position: absolute; right: 0; }
+footer button:hover { cursor: pointer; background: #ef7460; border: 1px solid var(--principal); color: var(--principal); }
+
+#subfooter { height: 90px; font-size: 14px; display: flex; align-items: center; justify-content: center; background: #F2F2F2 }
+
+
+/* -------------------------------- Versionamento Mobile: --------------------------------- */	
+
+@media screen and (max-width: 1024px) { 
+    header nav { display: none; }
+    header article { justify-content: space-evenly; padding: 0 15px; }
+    .logo img { max-width: 100px; }
+    .conta { margin-left: 0; }
+    .carrinhoButton { margin-left: 0; }
+    .wrapper-produtos { grid-template-columns: 100%; }
+    #destaques { padding-bottom: 50px; }
+    #destaques h1 { margin: 50px 0 50px 0; }
+    #minhaConta { right: initial; max-width: 100%; }
+    #carrinho { right: initial; max-width: 100%; }
+    .carrinhoHeader::before { display: none; }
+    .carrinhoProd { padding: 15px }
+    .carrinhoProd img { max-width: 55px; margin-left: 5px; }
+    .carrinhoTotal button { max-width: 100%; }
+    .produto { margin-bottom: 25px; }
+    footer { height: initial; }
+    footer article { display: grid; grid-template-columns: 100%; }
+    .newsletter { max-width: 100%; padding: 25px }
+    .newsletter h1 { font-size: 35px; }
+    .newsletter p { font-size: 12px; }
+    footer form { margin-left: 0; padding: 0 25px; }
+    footer form input { width: 100%; margin-bottom: 20px; }
+    footer form input:first-child { margin-right:0 }
+    footer button { margin-bottom: 25px; position: initial; width: 100%; }
+}
