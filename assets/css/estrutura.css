@@ -116,6 +116,33 @@ footer button:hover { cursor: pointer; background: #ef7460; border: 1px solid va
 #subfooter { height: 90px; font-size: 14px; display: flex; align-items: center; justify-content: center; background: #F2F2F2 }
 
 
+/* -------------------------------- Pagina Produto: --------------------------------- */	
+.pageProduto .wrapper-produtos { display: grid; grid-template-columns: 50% 50%; justify-items: center; }
+.pageProduto .produto { max-width: 100%; padding: 0 30px; }
+.pageProduto .produto:last-child { max-width: 100%; padding: 0 30px; border:initial; }
+.pageProduto .produto:last-child:hover { box-shadow: initial; }
+.pageProduto .produto h3 { font-size: 40px; line-height: 55px; letter-spacing: 0.12em; margin-bottom: 45px; }
+.pageProduto .produto p { margin-bottom: 10px; }
+.pageProduto .produto-thumb { display: inline-block; border: 1px solid #EEEEEE; border-radius: var(--radius); margin-top: 20px; margin-right: 15px; }
+.pageProduto .produto-thumb img { max-width: 100px; }
+
+.pageProduto .produto .precoAnterior { color: #AAAAAA; font-size: 16px; display: block; text-decoration: line-through; }
+
+.pageProduto #destaques { padding-top: 68px }
+.pageProduto .produtoBoxDesc { float: left; }
+.pageProduto .produtoBoxDesc button { margin-top: 10px; }
+.pageProduto .produtoBoxLinha { display: flex; align-items: center; margin-top: 53px }
+.pageProduto .produtoBoxLinha p, .pageProduto .produtoBoxLinha button { display: flex; margin: 0 }
+.pageProduto .produtoBoxLinha button { width: 317px }
+.pageProduto .produtoBoxLinha p { color: var(--secundaria); font-size: 15px; width: 120px; height: 50px; border: 1px solid #EEEEEE; }
+.pageProduto .produtoBoxLinha p:first-child { display: flex; align-items: center; justify-content: center; margin-right: 15px; }
+.pageProduto .produtoBoxLinha span { color: var(--vermelho); padding: 0 15px }
+/* -------------------------------- Pagina Produto: --------------------------------- */	
+
+
+
+
+
 /* -------------------------------- Versionamento Mobile: --------------------------------- */	
 
 @media screen and (max-width: 1024px) { 
@@ -143,4 +170,16 @@ footer button:hover { cursor: pointer; background: #ef7460; border: 1px solid va
     footer form input { width: 100%; margin-bottom: 20px; }
     footer form input:first-child { margin-right:0 }
     footer button { margin-bottom: 25px; position: initial; width: 100%; }
+    
+    
+    /* -------------------------------- Pagina Produto Mobile: --------------------------------- */	
+    
+    .pageProduto .wrapper-produtos { display: grid; grid-template-columns: 100%; }
+    .pageProduto .produtoBoxImagens { padding: 20px; }
+    .pageProduto .produto-thumb { margin-top: initial }
+    .pageProduto .produto h3 { font-size: 25px; line-height: 30px; margin-bottom: 25px; }
+    .pageProduto .produtoBoxDesc { max-width: 100%; }
+    .pageProduto .produtoBoxLinha { margin-top: 20px; }
+    .pageProduto #destaques { padding-top: initial; }
 }
+
